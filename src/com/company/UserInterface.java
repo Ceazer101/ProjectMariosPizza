@@ -9,8 +9,7 @@ public class UserInterface {
 
 
     public void userOptions() {
-        System.out.println("Du har følgende valgmuligheder:");
-        System.out.println("Du kan tatste følgende kommandoer: ");
+        System.out.println("Du kan taste følgende kommandoer: ");
         System.out.println("'o' for at oprette ordre\n'm' for at se menu\n's' for at se bestillingsoversigt" +
                 "\n'a' for at afslutte en ordre\n'g' for at gemme ordrehistorik");
 
