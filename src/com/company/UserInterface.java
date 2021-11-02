@@ -6,11 +6,12 @@ public class UserInterface {
 
     private Scanner scanner = new Scanner(System.in);
     private String input;
+    Menu menu = new Menu();
 
 
     public void userOptions() {
         System.out.println("Du kan taste følgende kommandoer: ");
-        System.out.println("'o' for at oprette ordre\n'm' for at se menu\n's' for at se bestillingsoversigt" +
+        System.out.println("'o' for at oprette ordre\n'm' for at se menuen\n's' for at se bestillingsoversigt" +
                 "\n'a' for at afslutte en ordre\n'g' for at gemme ordrehistorik");
 
 
@@ -22,7 +23,7 @@ public class UserInterface {
                     break;
 
                 case "menu", "m":
-
+                    System.out.println(menu.toString());
                     break;
 
                 case "se", "s":
