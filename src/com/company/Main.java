@@ -6,6 +6,8 @@ public class Main {
 	// write your code here
         //Test1;
         Menu menu = new Menu();
-        System.out.println(menu);
+        UserInterface ui = new UserInterface();
+        ui.userOptions();
+       // System.out.println(menu);
     }
 }

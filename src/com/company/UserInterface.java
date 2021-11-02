@@ -15,7 +15,8 @@ public class UserInterface {
                 "\n'a' for at afslutte en ordre\n'g' for at gemme ordrehistorik");
 
 
-        while (true) {
+        boolean running = true;
+        while (running) {
             input = scanner.next().trim().toLowerCase(Locale.ROOT);
             switch(input) {
                 case "opret", "o":
@@ -31,7 +32,7 @@ public class UserInterface {
                     break;
 
                 case "afslut", "a":
-
+                    running = false;
                     break;
 
                 case "gem", "g":
