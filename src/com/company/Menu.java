@@ -45,4 +45,10 @@ public class Menu {
         }
         return "";
     }
+
+    @Override
+    public String toString() {
+
+        return getFormattedMenu();
+    }
 }
