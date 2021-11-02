@@ -29,8 +29,25 @@ public class Menu {
         this.menu.add(pizza);
     }
 
-    //returns the menu
-    public ArrayList<Pizza> getMenu() {
+    //TODO delete if not used
+    public ArrayList<Pizza> getMenu(){
         return menu;
+    }
+
+    //returns the menu
+    public String getFormattedMenu() {
+        if (menu.size() > 0) {
+
+            for (int i = 0; i < menu.size(); i++) {
+                    System.out.println(menu.get(i));
+            }
+        }
+        return "";
+    }
+
+    @Override
+    public String toString() {
+
+        return getFormattedMenu();
     }
 }
