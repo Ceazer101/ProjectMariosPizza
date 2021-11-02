@@ -6,9 +6,9 @@ public class Menu {
     private ArrayList<Pizza> menu = new ArrayList<Pizza>();
 
     public Menu(){
-        Pizza vesuvio = new Pizza(1, "Vesuvio", "tomatsauce, ost, skinke, oregano", 57);
-        Pizza amerikaner = new Pizza(2, "Amerikaner", "tomatsauce, ost, oksefars, oregano", 53);
-        Pizza cacciatore = new Pizza(3, "Cacciatore", "tomatsauce, ost, pepperoni, oregano", 57);
+        addPizza(new Pizza(1, "Vesuvio", "tomatsauce, ost, skinke, oregano", 57));
+        addPizza(new Pizza(2, "Amerikaner", "tomatsauce, ost, oksefars, oregano", 53));
+        addPizza(new Pizza(3, "Cacciatore", "tomatsauce, ost, pepperoni, oregano", 57));
         /*Pizza vesuvio = new Pizza(4, "Vesuvio", "tomatsovs, ost, skinke, oregano,", 57);
         Pizza vesuvio = new Pizza(5, "Vesuvio", "tomatsovs, ost, skinke, oregano,", 57);
         Pizza vesuvio = new Pizza(6, "Vesuvio", "tomatsovs, ost, skinke, oregano,", 57);
@@ -20,12 +20,11 @@ public class Menu {
         Pizza vesuvio = new Pizza(12, "Vesuvio", "tomatsovs, ost, skinke, oregano,", 57);
         Pizza vesuvio = new Pizza(13, "Vesuvio", "tomatsovs, ost, skinke, oregano,", 57);
         Pizza vesuvio = new Pizza(14, "Vesuvio", "tomatsovs, ost, skinke, oregano,", 57);*/
-
-        menu.add(vesuvio);
-        menu.add(amerikaner);
-        menu.add(cacciatore);
     }
 
+    private void addPizza(Pizza pizza) {
+        this.menu.add(pizza);
+    }
 
 
     public ArrayList<Pizza> getMenu() {
