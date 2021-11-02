@@ -34,20 +34,15 @@ public class Menu {
         return menu;
     }
 
-    //returns the menu
-    public String getFormattedMenu() {
-        if (menu.size() > 0) {
-
-            for (int i = 0; i < menu.size(); i++) {
-                    System.out.println(menu.get(i));
-            }
-        }
-        return "";
-    }
-
     @Override
     public String toString() {
 
-        return getFormattedMenu();
+        if (menu.size() > 0) {
+
+            for (int i = 0; i < menu.size(); i++) {
+                System.out.println(menu.get(i));
+            }
+        }
+        return "";
     }
 }
