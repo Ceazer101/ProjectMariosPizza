@@ -18,7 +18,7 @@ public class Menu {
         addPizza(new Pizza(9, "Toronfo", "tomatsauce, ost, skinke, bacon, kebab, chili, oregano", 61));
         addPizza(new Pizza(10, "Capricciosa", "tomatsauce, ost, skinke, champignon, oregano", 61));
         addPizza(new Pizza(11, "Hawai", "tomatsauce, ost, skinke, ananas, oregano", 61));
-        addPizza(new Pizza(12, "Le blissola", "tomatsauce, ost, skinke, rejer, oregeno", 61));
+        addPizza(new Pizza(12, "Le blissola", "tomatsauce, ost, skinke, rejer, oregano", 61));
         addPizza(new Pizza(13, "Venezia", "tomatsauce, ost, skinke, bacon, oregano", 61));
         addPizza(new Pizza(14, "Mafia", "tomatsauce, ost, pepperoni, bacon, løg, oregano", 61));
 
@@ -34,10 +34,8 @@ public class Menu {
         return menu;
     }
 
-    //Returns formatted menu
     @Override
     public String toString() {
-
         if (menu.size() > 0) {
 
             for (int i = 0; i < menu.size(); i++) {
@@ -46,5 +44,4 @@ public class Menu {
         }
         return "";
     }
-
 }
