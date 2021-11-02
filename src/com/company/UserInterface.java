@@ -38,7 +38,7 @@ public class UserInterface {
                     break;
 
                 default:
-                    System.out.println("Det forsod vi ikke helt, prøv at indtast en ny kommando.");
+                    System.out.println("Det forstod vi ikke helt, prøv at indtast en ny kommando.");
                     break;
             }
         }
