@@ -25,6 +25,7 @@ public class Pizza {
         return ingredients;
     }
 
+
     public int getPrice() {
         return price;
     }
