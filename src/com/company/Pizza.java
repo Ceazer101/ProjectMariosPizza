@@ -3,12 +3,13 @@ package com.company;
 public class Pizza {
     private int number;
     private String name;
-    private String ingridiens;
+    private String ingredients;
     private int price;
 
-    public Pizza (int number, String name, String ingridiens, int price){
+    public Pizza (int number, String name, String ingredients, int price){
+        this.number = number;
         this.name = name;
-        this.ingridiens = ingridiens;
+        this.ingredients = ingredients;
         this.price = price;
     }
 
@@ -20,8 +21,8 @@ public class Pizza {
         return name;
     }
 
-    public String getIngridiens() {
-        return ingridiens;
+    public String getIngredients() {
+        return ingredients;
     }
 
     public int getPrice() {
@@ -30,6 +31,6 @@ public class Pizza {
 
     @Override
     public String toString() {
-        return number + ". " + name + ", " + ingridiens + ": " + price;
+        return number + ". " + name + ", " + ingredients + ": " + price;
     }
 }
