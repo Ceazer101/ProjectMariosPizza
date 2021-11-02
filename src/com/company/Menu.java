@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Menu {
     private ArrayList<Pizza> menu = new ArrayList<Pizza>();
 
+    //Hardcoded pizza's and added them to the arraylist
     public Menu(){
         addPizza(new Pizza(1, "Vesuvio", "tomatsauce, ost, skinke, oregano", 57));
         addPizza(new Pizza(2, "Amerikaner", "tomatsauce, ost, oksefars, oregano", 53));
@@ -22,11 +23,12 @@ public class Menu {
         Pizza vesuvio = new Pizza(14, "Vesuvio", "tomatsovs, ost, skinke, oregano,", 57);*/
     }
 
-    private void addPizza(Pizza pizza) {
+    //adds pizza
+    public void addPizza(Pizza pizza) {
         this.menu.add(pizza);
     }
 
-
+    //returns the menu
     public ArrayList<Pizza> getMenu() {
         return menu;
     }
