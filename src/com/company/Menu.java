@@ -34,6 +34,7 @@ public class Menu {
         return menu;
     }
 
+    //Returns formatted menu
     @Override
     public String toString() {
 
