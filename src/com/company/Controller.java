@@ -6,6 +6,10 @@ public class Controller {
 
     private ArrayList<Pizza> orderList;
 
+    public Controller(ArrayList<Pizza> orderList){
+        this.orderList = orderList;
+    }
+
     public void start(){
 
     }
