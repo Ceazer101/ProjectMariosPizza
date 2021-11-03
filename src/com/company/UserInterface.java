@@ -68,6 +68,7 @@ public class UserInterface {
        while(done){
            String userInput = scanner.next().trim().toLowerCase();
            controller.createOrder(userInput);
+
        }
        scanner.next();
    }

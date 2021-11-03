@@ -10,8 +10,9 @@ public class Order {
        this.orderNumber = orderNumber;
    }
 
-   public void addOrder(Pizza pizza){
+   public Pizza addOrder(Pizza pizza){
        orderList.add(pizza);
+       return pizza;
    }
 
     public ArrayList<Pizza> getOrderList() {
