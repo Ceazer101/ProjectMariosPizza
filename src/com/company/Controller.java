@@ -5,9 +5,11 @@ import java.util.ArrayList;
 public class Controller {
 
     private ArrayList<Pizza> orderList;
+    private Menu MENU;
 
-    public Controller(ArrayList<Pizza> orderList){
-        this.orderList = orderList;
+    public Controller(){
+        orderList = new ArrayList<>();
+        MENU = new Menu();
     }
 
     public void start(){
