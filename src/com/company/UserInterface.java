@@ -21,7 +21,7 @@ public class UserInterface {
 
         boolean running = true;
         while (running) {
-            input = scanner.next().trim().toLowerCase(Locale.ROOT);
+            input = scanner.next().trim().toLowerCase();
             switch(input) {
                 case "opret", "o":
 
@@ -57,5 +57,16 @@ public class UserInterface {
             }
         }
     }
+
+   public void orderInterface(){
+       controller.seeMenu();
+       System.out.println("indtast venligst navn/nr på den pizza der skal tilføjes: ");
+       boolean done = true;
+       while(done){
+           String userInput = scanner.next().trim().toLowerCase();
+           controller.createOrder(userInput);
+       }
+   }
+
 
 }

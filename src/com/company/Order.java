@@ -6,9 +6,8 @@ public class Order {
     private ArrayList<Pizza> orderList = new ArrayList<>();
     private int orderNumber;
 
-   public Order(int orderNumber){
+   public Order(int orderNumber, Pizza pizza){
        this.orderNumber = orderNumber;
-
    }
 
 
