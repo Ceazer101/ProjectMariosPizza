@@ -7,7 +7,9 @@ public class Main {
         //Test1;
         Menu menu = new Menu();
         UserInterface ui = new UserInterface();
+        Order order = new Order();
         ui.userOptions();
+        System.out.println(order.getOrderList());
        // System.out.println(menu);
     }
 }

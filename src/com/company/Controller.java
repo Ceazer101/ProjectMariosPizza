@@ -3,7 +3,7 @@ package com.company;
 public class Controller {
 
     private Menu MENU;
-    private Order order;
+    private Order order = new Order();
 
     public Controller(){
         MENU = new Menu();
