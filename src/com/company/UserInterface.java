@@ -11,8 +11,8 @@ public class UserInterface {
 
     public void userOptions() {
         System.out.println("Du kan taste følgende kommandoer: ");
-        System.out.println("'o' for at oprette ordre\n'm' for at se menuen\n's' for at se bestillingsoversigt" +
-                "\n'a' for at afslutte en ordre\n'g' for at gemme ordrehistorik\n'e' for exit");
+        System.out.println("'o' for at oprette ordre\n'r' for at rette din ordre\n'g' for at gemme ordrehistorik\n'a' for at afslutte en ordre" +
+                "\n's' for at se bestillingsoversigt\n'm' for at se menuen\n'e' for exit");
 
 
         boolean running = true;
