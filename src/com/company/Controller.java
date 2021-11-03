@@ -22,6 +22,10 @@ public class Controller {
 
     }
 
+    public String seeMenu(){
+        return MENU.toString();
+    }
+
 }
 
 

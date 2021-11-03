@@ -6,7 +6,11 @@ public class UserInterface {
 
     private Scanner scanner = new Scanner(System.in);
     private String input;
-    Menu menu = new Menu();
+    private Controller controller;
+
+    public UserInterface() {
+        this.controller = new Controller();
+    }
 
 
     public void userOptions() {
@@ -40,7 +44,7 @@ public class UserInterface {
                     break;
 
                 case "menu", "m":
-                    System.out.println(menu.toString());
+                    controller.seeMenu();
                     break;
 
                 case "exit", "e":
