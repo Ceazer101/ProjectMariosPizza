@@ -6,7 +6,16 @@ public class Controller {
 
     }
 
+    public void opretOdre(){
 
+    }
+
+    public void afslutOdre(){
+
+    }
 }
+
+
+
 
 
