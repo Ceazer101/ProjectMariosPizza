@@ -4,17 +4,17 @@ import java.util.ArrayList;
 
 public class Controller {
 
-    private ArrayList<Pizza> bestiltePizza;
+    private ArrayList<Pizza> orderList;
 
     public void start(){
 
     }
 
-    public void opretOrdre(){
+    public void createOrder(){
 
     }
 
-    public void afslutOrdre(){
+    public void finishOrder(){
 
     }
 }
