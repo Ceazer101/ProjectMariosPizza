@@ -29,7 +29,7 @@ public class Menu {
         this.menu.add(pizza);
     }
 
-    //TODO delete if not used
+    //TODO: delete if not used
     public ArrayList<Pizza> getMenu(){
         return menu;
     }
