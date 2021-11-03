@@ -6,11 +6,11 @@ public class Controller {
 
     }
 
-    public void opretOdre(){
+    public void opretOrdre(){
 
     }
 
-    public void afslutOdre(){
+    public void afslutOrdre(){
 
     }
 }
