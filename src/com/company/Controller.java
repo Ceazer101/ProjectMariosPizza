@@ -1,10 +1,9 @@
 package com.company;
 
-import java.util.ArrayList;
-
 public class Controller {
 
     private Menu MENU;
+    private Order order;
 
     public Controller(){
         MENU = new Menu();
@@ -14,8 +13,14 @@ public class Controller {
 
     }
 
-    public void createOrder(String userInput){
-
+    public Pizza createOrder(String userInput){
+        for (Pizza pizza : MENU.getMenu()) {
+            if (pizza.getName().equalsIgnoreCase(userInput)) {
+                order.addOrder(pizza);
+                return pizza;
+            }
+        }
+        return null;
     }
 
     public void finishOrder(){

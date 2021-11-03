@@ -24,7 +24,7 @@ public class UserInterface {
             input = scanner.next().trim().toLowerCase();
             switch(input) {
                 case "opret", "o":
-
+                    orderInterface();
                     break;
 
                 case "ret" , "r":
@@ -59,13 +59,17 @@ public class UserInterface {
     }
 
    public void orderInterface(){
+       System.out.println("Indtast venligst ordrenummer: ");
+       int orderNumber = scanner.nextInt();
+
        controller.seeMenu();
-       System.out.println("indtast venligst navn/nr på den pizza der skal tilføjes: ");
+       System.out.println("indtast venligst navn på den pizza der skal tilføjes: ");
        boolean done = true;
        while(done){
            String userInput = scanner.next().trim().toLowerCase();
            controller.createOrder(userInput);
        }
+       scanner.next();
    }
 
 
