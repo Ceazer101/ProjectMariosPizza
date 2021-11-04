@@ -64,13 +64,17 @@ public class UserInterface {
 
        controller.seeMenu();
        System.out.println("indtast venligst navn på den pizza der skal tilføjes: ");
-       boolean done = true;
-       while(done){
+       boolean notDone = true;
+       while(notDone){
            String userInput = scanner.next().trim().toLowerCase();
-           controller.createOrder(userInput);
+           if (userInput.equals("back")){
+               notDone = false;
+           } else {
+               controller.createOrder(userInput);
+           }
 
        }
-       scanner.next();
+       //scanner.next();
    }
 
 
