@@ -1,5 +1,6 @@
 package com.company;
-import java.util.Locale;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -7,6 +8,7 @@ public class UserInterface {
     private Scanner scanner = new Scanner(System.in);
     private String input;
     private Controller controller;
+    private ActiveOrder activeOrder = new ActiveOrder();
 
     public UserInterface() {
         this.controller = new Controller();
@@ -58,23 +60,43 @@ public class UserInterface {
         }
     }
 
+    /*public void orderInterface(){
+        System.out.println("Indtast ordernummer");
+        int ordernumber = scanner.nextInt();
+        System.out.println("Indtast navn på pizza'er");
+        String pizzaName = scanner.nextLine();
+
+        Order order = new Order(ordernumber, )
+
+    }*/
+
    public void orderInterface(){
+       //Asks user for ordernumber and saves it in a variable
        System.out.println("Indtast venligst ordrenummer: ");
        int orderNumber = scanner.nextInt();
 
+       //prints the menu
        controller.seeMenu();
+
+       //asks the user for pizza name
        System.out.println("indtast venligst navn på den pizza der skal tilføjes: ");
        boolean notDone = true;
        while(notDone){
+           //saves pizza name in variable
            String userInput = scanner.next().trim().toLowerCase();
-           if (userInput.equals("back")){
+
+           //if the user types "done", the loops ends
+           // if the user does not enter "done", then you will keep adding to the order
+           if (userInput.equals("done")){
                notDone = false;
            } else {
-               controller.createOrder(userInput);
+              // if(userInput.equals())
+               Order newOrder = new Order(orderNumber, userInput);
+               activeOrder.addOrder(newOrder);
            }
-
        }
-       //scanner.next();
+       System.out.println(activeOrder.getOrders());
+
    }
 
 

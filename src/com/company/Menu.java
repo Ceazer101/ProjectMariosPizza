@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Menu {
     private ArrayList<Pizza> menu = new ArrayList<>();
@@ -32,6 +33,15 @@ public class Menu {
     //TODO: delete if not used
     public ArrayList<Pizza> getMenu(){
         return menu;
+    }
+
+    public Pizza findPizza(String userInput){
+        for (Pizza pizza : menu) {
+            if(userInput.equals(pizza)){
+                return pizza;
+            }
+        }
+        return null;
     }
 
     @Override
