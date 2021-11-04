@@ -35,9 +35,9 @@ public class Menu {
         return menu;
     }
 
-    public Pizza findPizza(String userInput){
+    public Pizza findPizza(int userInput){
         for (Pizza pizza : menu) {
-            if(userInput.equals(pizza)){
+            if(userInput == pizza.getNumber()){
                 return pizza;
             }
         }

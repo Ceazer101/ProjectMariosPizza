@@ -1,6 +1,5 @@
 package com.company;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -60,16 +59,6 @@ public class UserInterface {
         }
     }
 
-    /*public void orderInterface(){
-        System.out.println("Indtast ordernummer");
-        int ordernumber = scanner.nextInt();
-        System.out.println("Indtast navn på pizza'er");
-        String pizzaName = scanner.nextLine();
-
-        Order order = new Order(ordernumber, )
-
-    }*/
-
    public void orderInterface(){
        //Asks user for ordernumber and saves it in a variable
        System.out.println("Indtast venligst ordrenummer: ");
@@ -79,23 +68,31 @@ public class UserInterface {
        controller.seeMenu();
 
        //asks the user for pizza name
-       System.out.println("indtast venligst navn på den pizza der skal tilføjes: ");
+       System.out.println("indtast venligst nummer på den pizza der skal tilføjes: ");
        boolean notDone = true;
+       Order newOrder = new Order();
+       newOrder.setOrderNumber(orderNumber);
        while(notDone){
            //saves pizza name in variable
-           String userInput = scanner.next().trim().toLowerCase();
+           int userInput = scanner.nextInt();
 
            //if the user types "done", the loops ends
            // if the user does not enter "done", then you will keep adding to the order
-           if (userInput.equals("done")){
+           if (userInput == 0){
                notDone = false;
            } else {
-              // if(userInput.equals())
-               Order newOrder = new Order(orderNumber, userInput);
-               activeOrder.addOrder(newOrder);
+               // if(userInput.equals())
+               newOrder.addPizza(controller.findPizza(userInput));
            }
        }
-       System.out.println(activeOrder.getOrders());
+       activeOrder.addOrder(newOrder);
+       for (Order order: activeOrder.getOrders() ){
+           System.out.println(order.getOrderNumber());
+           for (Pizza pizza : order.getPizzas()) {
+               System.out.print(pizza.getNumber() + "  ");
+               System.out.println(pizza.getName());
+           }
+       }
 
    }
 

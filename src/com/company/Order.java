@@ -4,28 +4,40 @@ import java.util.ArrayList;
 
 public class Order {
     private String name;
-    private ArrayList<Pizza> orderList = new ArrayList<>();
+    private ArrayList<Pizza> pizzas = new ArrayList<>();
     private int orderNumber;
 
-   public Order(int orderNumber, String name){
+   public Order(int orderNumber, ArrayList<Pizza> list){
        this.orderNumber = orderNumber;
-       this.name = name;
+       this.pizzas = list;
    }
+
+    public Order() {
+    }
+
+    public void addPizza(Pizza pizza){
+       pizzas.add(pizza);
+    }
+
+    public int getOrderNumber() {
+        return orderNumber;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public ArrayList<Pizza> getPizzas() {
+        return pizzas;
+    }
+
+    public void setOrderNumber(int orderNumber) {
+        this.orderNumber = orderNumber;
+    }
 
     @Override
     public String toString() {
-        return "Order{" +
-                "name='" + name + '\'' +
-                ", orderNumber=" + orderNumber +
-                '}';
+        return "Ordrenummer " + pizzas;
     }
 
-  /*public Pizza addOrder(int orderNumber, Pizza name){
-       orderList.add(orderNumber, name);
-       return pizza;
-   }*/
-
-   /* public ArrayList<Pizza> getOrderList() {
-        return orderList;
-    }*/
 }
