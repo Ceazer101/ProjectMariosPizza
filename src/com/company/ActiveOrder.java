@@ -24,7 +24,7 @@ public class ActiveOrder {
     public void showActiveOrders(){
 
         for (Order order: getOrders() ){
-            System.out.println(order.getOrderNumber());
+            System.out.println("(" + order.getOrderNumber() + ")");
             for (Pizza pizza : order.getPizzas()) {
                 System.out.print(pizza.getNumber() + "  ");
                 System.out.println(pizza.getName());
