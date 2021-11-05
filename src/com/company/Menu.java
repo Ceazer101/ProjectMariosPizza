@@ -39,6 +39,14 @@ public class Menu {
         return null;
     }
 
+    public ArrayList<Pizza> getMenu() {
+        return menu;
+    }
+
+    public int menuSize(){
+        return menu.size();
+    }
+
     @Override
     public String toString() {
         if (menu.size() > 0) {

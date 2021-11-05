@@ -35,7 +35,7 @@ public class Controller {
             if (userInput == 0){
                 notDone = false;
             } else {
-                if (userInput > 14 || userInput < 0) {
+                if (userInput > MENU.menuSize() || userInput < 0) {
                     System.out.println("Der findes ikke en pizza med det nummer, prøv  igen.");
                 } else {
                     newOrder.addPizza(findPizza(userInput));
