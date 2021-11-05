@@ -64,4 +64,17 @@ public class Order {
         }
     }
 
+    public String makeStringPizzaName(){
+        StringBuilder stringBuilder = new StringBuilder();
+        for (Pizza pizza : pizzas) {
+            stringBuilder.append(pizza.getNumber()).append(" ");
+            stringBuilder.append(pizza.getName()).append(" ");
+        }
+        return stringBuilder.toString();
+    }
+
+    public void clearOrders(){
+        orders.clear();
+    }
+
 }

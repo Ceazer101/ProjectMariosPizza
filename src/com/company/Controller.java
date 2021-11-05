@@ -1,5 +1,6 @@
 package com.company;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -48,6 +49,19 @@ public class Controller {
     public ArrayList<Order> listOfActiveOrders() {
         order.showActiveOrders();
         return order.getOrders();
+    }
+
+    public void saveOrder() throws IOException {
+        File file = new File("data/historik.txt");
+        FileWriter fileWriter = new FileWriter(file, true);
+
+        for (Order order : order.getOrders()) {
+            fileWriter.append(order.makeStringPizzaName() + " ");
+            fileWriter.append("\n");
+
+        }
+        fileWriter.close();
+        order.clearOrders();
     }
 
 }

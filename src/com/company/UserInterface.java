@@ -1,5 +1,7 @@
 package com.company;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -14,14 +16,14 @@ public class UserInterface {
     }
 
 
-    public void userOptions() {
+    public void userOptions() throws IOException {
 
         boolean running = true;
         while (running) {
             System.out.println();
             System.out.println("Du kan taste følgende kommandoer: ");
             System.out.println("'o' for at oprette en bestilling\n'r' for at rette en bestilling\n'g' for at gemme alle aktive bestillinger" +
-                    "\n'a' for at afslutte en færdig bestilling\n's' for at se bestillingsoversigt\n'm' for at se menuen\n'e' for exit");
+                    "\n'a' for at afslutte programmet\n's' for at se bestillingsoversigt\n'm' for at se menuen\n");
             input = scanner.next().trim().toLowerCase();
             switch(input) {
                 case "opret", "o":
@@ -29,15 +31,16 @@ public class UserInterface {
                     break;
 
                 case "ret" , "r":
-
+                    //TODO: laves kun hvis der er tid
                     break;
 
                 case "gem", "g":
-
+                    controller.saveOrder();
                     break;
 
                 case "afslut", "a":
-
+                    controller.saveOrder();
+                    running = false;
                     break;
 
                 case "se", "s":
@@ -46,10 +49,6 @@ public class UserInterface {
 
                 case "menu", "m":
                     controller.seeMenu();
-                    break;
-
-                case "exit", "e":
-                    running = false;
                     break;
 
                 default:
