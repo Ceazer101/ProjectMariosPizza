@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Order {
     private ArrayList<Order> orders = new ArrayList<>();
     private ArrayList<Pizza> pizzas = new ArrayList<>();
-    private int orderNumber;
+    private int orderNumber = 1;
 
 
     public Order(int orderNumber, ArrayList<Pizza> list){
@@ -14,6 +14,10 @@ public class Order {
     }
 
     public Order() {
+    }
+
+    public void orderCounter(){
+        orderNumber++;
     }
 
     public void addPizza(Pizza pizza){

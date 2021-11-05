@@ -22,10 +22,10 @@ public class Controller {
         return MENU.findPizza(userInput);
     }
 
-    public void createOrder(int orderNumber){
+    public void createOrder(){
         boolean notDone = true;
         Order newOrder = new Order();
-        newOrder.setOrderNumber(orderNumber);
+        newOrder.setOrderNumber(order.getOrderNumber());
         while(notDone){
             //saves pizza name in variable
             int userInput = scanner.nextInt();
@@ -36,12 +36,13 @@ public class Controller {
                 notDone = false;
             } else {
                 if (userInput > MENU.menuSize() || userInput < 0) {
-                    System.out.println("Der findes ikke en pizza med det nummer, prøv  igen.");
+                    System.out.println("Der findes ikke en pizza med det nummer, prøv  igen."); //TODO: not good practice!
                 } else {
                     newOrder.addPizza(findPizza(userInput));
                 }
             }
         }
+        order.orderCounter();
         order.addOrder(newOrder);
     }
 
