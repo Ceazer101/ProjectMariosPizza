@@ -17,6 +17,22 @@ public class ActiveOrder {
         orders.add(order);
     }
 
+    public void removeOrder(Order order){
+        orders.remove(order);
+    }
+
+    public void showActiveOrders(){
+
+        for (Order order: getOrders() ){
+            System.out.println(order.getOrderNumber());
+            for (Pizza pizza : order.getPizzas()) {
+                System.out.print(pizza.getNumber() + "  ");
+                System.out.println(pizza.getName());
+            }
+        }
+
+    }
+
     @Override
     public String toString() {
         return "ActiveOrder{" +

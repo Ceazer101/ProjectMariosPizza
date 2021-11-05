@@ -7,10 +7,10 @@ public class Order {
     private ArrayList<Pizza> pizzas = new ArrayList<>();
     private int orderNumber;
 
-   public Order(int orderNumber, ArrayList<Pizza> list){
+    public Order(int orderNumber, ArrayList<Pizza> list){
        this.orderNumber = orderNumber;
        this.pizzas = list;
-   }
+    }
 
     public Order() {
     }
@@ -33,11 +33,6 @@ public class Order {
 
     public void setOrderNumber(int orderNumber) {
         this.orderNumber = orderNumber;
-    }
-
-    @Override
-    public String toString() {
-        return "Ordrenummer " + pizzas;
     }
 
 }

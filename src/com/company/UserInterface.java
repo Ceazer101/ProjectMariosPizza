@@ -7,7 +7,7 @@ public class UserInterface {
     private Scanner scanner = new Scanner(System.in);
     private String input;
     private Controller controller;
-    private ActiveOrder activeOrder = new ActiveOrder();
+
 
     public UserInterface() {
         this.controller = new Controller();
@@ -18,7 +18,6 @@ public class UserInterface {
         System.out.println("Du kan taste følgende kommandoer: ");
         System.out.println("'o' for at oprette en bestilling\n'r' for at rette en bestilling\n'g' for at gemme alle aktive bestillinger" +
                 "\n'a' for at afslutte en færdig bestilling\n's' for at se bestillingsoversigt\n'm' for at se menuen\n'e' for exit");
-
 
         boolean running = true;
         while (running) {
@@ -41,7 +40,7 @@ public class UserInterface {
                     break;
 
                 case "se", "s":
-
+                    controller.listOfActiveOrders();
                     break;
 
                 case "menu", "m":
@@ -69,30 +68,7 @@ public class UserInterface {
 
        //asks the user for pizza name
        System.out.println("indtast venligst nummer på den pizza der skal tilføjes: ");
-       boolean notDone = true;
-       Order newOrder = new Order();
-       newOrder.setOrderNumber(orderNumber);
-       while(notDone){
-           //saves pizza name in variable
-           int userInput = scanner.nextInt();
-
-           //if the user types "done", the loops ends
-           // if the user does not enter "done", then you will keep adding to the order
-           if (userInput == 0){
-               notDone = false;
-           } else {
-               // if(userInput.equals())
-               newOrder.addPizza(controller.findPizza(userInput));
-           }
-       }
-       activeOrder.addOrder(newOrder);
-       for (Order order: activeOrder.getOrders() ){
-           System.out.println(order.getOrderNumber());
-           for (Pizza pizza : order.getPizzas()) {
-               System.out.print(pizza.getNumber() + "  ");
-               System.out.println(pizza.getName());
-           }
-       }
+       controller.createOrder(orderNumber);
 
    }
 
