@@ -3,7 +3,6 @@ package com.company;
 import java.util.ArrayList;
 
 public class Order {
-    private String name;
     private ArrayList<Order> orders = new ArrayList<>();
     private ArrayList<Pizza> pizzas = new ArrayList<>();
     private int orderNumber;
@@ -25,10 +24,6 @@ public class Order {
         return orderNumber;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public ArrayList<Pizza> getPizzas() {
         return pizzas;
     }
@@ -41,16 +36,8 @@ public class Order {
         return orders;
     }
 
-    public void setOrders(ArrayList<Order> orders) {
-        this.orders = orders;
-    }
-
     public void addOrder(Order order){
         orders.add(order);
-    }
-
-    public void removeOrder(Order order){
-        orders.remove(order);
     }
 
     public void showActiveOrders(){
@@ -76,5 +63,4 @@ public class Order {
     public void clearOrders(){
         orders.clear();
     }
-
 }

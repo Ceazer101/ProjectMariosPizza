@@ -30,11 +30,6 @@ public class Menu {
         this.menu.add(pizza);
     }
 
-    //TODO: delete if not used
-    public ArrayList<Pizza> getMenu(){
-        return menu;
-    }
-
     public Pizza findPizza(int userInput){
         for (Pizza pizza : menu) {
             if(userInput == pizza.getNumber()){

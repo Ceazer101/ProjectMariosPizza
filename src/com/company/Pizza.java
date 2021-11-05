@@ -21,15 +21,6 @@ public class Pizza {
         return name;
     }
 
-    public String getIngredients() {
-        return ingredients;
-    }
-
-
-    public int getPrice() {
-        return price;
-    }
-
     @Override
     public String toString() {
         return "nr " + number + ". " + name + ", " + ingredients + ": " + price + "kr.";

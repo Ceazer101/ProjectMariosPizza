@@ -14,10 +14,6 @@ public class Controller {
         MENU = new Menu();
     }
 
-    public void start(){
-
-    }
-
     public String seeMenu(){
         return MENU.toString();
     }
