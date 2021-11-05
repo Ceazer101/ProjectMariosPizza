@@ -47,12 +47,17 @@ public class Controller {
 
     public ArrayList<Order> listOfActiveOrders() {
         order.showActiveOrders();
-        return order.getOrders();
+        if (order.numbersOfOrders() > 0) {
+            return order.getOrders();
+        } else {
+            System.out.println("Der er ikke nogen aktive bestillinger");
+        }
+        return null;
     }
 
-    public void saveOrder() throws IOException {
-        File file = new File("data/historik.txt");
-        FileWriter fileWriter = new FileWriter(file, true);
+        public void saveOrder() throws IOException {
+            File file = new File("data/historik.txt");
+            FileWriter fileWriter = new FileWriter(file, true);
 
         for (Order order : order.getOrders()) {
             fileWriter.append(order.makeStringPizzaName() + " ");

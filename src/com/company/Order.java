@@ -55,6 +55,10 @@ public class Order {
         }
     }
 
+    public int numbersOfOrders(){
+        return orders.size();
+    }
+
     public String makeStringPizzaName(){
         StringBuilder stringBuilder = new StringBuilder();
         for (Pizza pizza : pizzas) {
