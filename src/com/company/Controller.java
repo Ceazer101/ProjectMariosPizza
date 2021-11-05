@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Controller {
 
-    private ActiveOrder activeOrder = new ActiveOrder();
+    private Order order = new Order();
     private Scanner scanner = new Scanner(System.in);
     private Menu MENU;
 
@@ -42,12 +42,12 @@ public class Controller {
                 newOrder.addPizza(findPizza(userInput));
             }
         }
-        activeOrder.addOrder(newOrder);
+        order.addOrder(newOrder);
     }
 
     public ArrayList<Order> listOfActiveOrders() {
-        activeOrder.showActiveOrders();
-        return activeOrder.getOrders();
+        order.showActiveOrders();
+        return order.getOrders();
     }
 
 }
