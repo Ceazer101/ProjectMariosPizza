@@ -65,7 +65,7 @@ public class UserInterface {
        //asks the user for pizza name
        System.out.println("indtast venligst nummer på den pizza der skal tilføjes (Slut bestilling med '0'): ");
 
-       controller.createOrder();
+       controller.createOrder(scanner);
 
    }
 

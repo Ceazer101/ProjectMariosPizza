@@ -7,7 +7,6 @@ import java.util.Scanner;
 public class Controller {
 
     private Order order = new Order();
-    private Scanner scanner = new Scanner(System.in);
     private Menu MENU;
 
     public Controller(){
@@ -22,7 +21,7 @@ public class Controller {
         return MENU.findPizza(userInput);
     }
 
-    public void createOrder(){
+    public void createOrder(Scanner scanner){
         boolean notDone = true;
         Order newOrder = new Order();
         newOrder.setOrderNumber(order.getOrderNumber());
