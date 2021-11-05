@@ -30,7 +30,6 @@ public class ActiveOrder {
                 System.out.println(pizza.getName());
             }
         }
-
     }
 
     @Override

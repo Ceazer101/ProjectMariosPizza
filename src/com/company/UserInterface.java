@@ -15,12 +15,13 @@ public class UserInterface {
 
 
     public void userOptions() {
-        System.out.println("Du kan taste følgende kommandoer: ");
-        System.out.println("'o' for at oprette en bestilling\n'r' for at rette en bestilling\n'g' for at gemme alle aktive bestillinger" +
-                "\n'a' for at afslutte en færdig bestilling\n's' for at se bestillingsoversigt\n'm' for at se menuen\n'e' for exit");
 
         boolean running = true;
         while (running) {
+            System.out.println();
+            System.out.println("Du kan taste følgende kommandoer: ");
+            System.out.println("'o' for at oprette en bestilling\n'r' for at rette en bestilling\n'g' for at gemme alle aktive bestillinger" +
+                    "\n'a' for at afslutte en færdig bestilling\n's' for at se bestillingsoversigt\n'm' for at se menuen\n'e' for exit");
             input = scanner.next().trim().toLowerCase();
             switch(input) {
                 case "opret", "o":
@@ -67,7 +68,8 @@ public class UserInterface {
        controller.seeMenu();
 
        //asks the user for pizza name
-       System.out.println("indtast venligst nummer på den pizza der skal tilføjes: ");
+       System.out.println("indtast venligst nummer på den pizza der skal tilføjes (Slut bestilling med '0'): ");
+
        controller.createOrder(orderNumber);
 
    }
