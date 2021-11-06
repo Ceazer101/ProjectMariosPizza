@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
+
+    //Attribute.
     private ArrayList<Pizza> menu = new ArrayList<>();
 
-    //Hardcoded pizza's and added them to the arraylist
+    //Hardcoded pizza's and added them to the arraylist.
     public Menu(){
         addPizza(new Pizza(1, "Vesuvio", "tomatsauce, ost, skinke, oregano", 57));
         addPizza(new Pizza(2, "Amerikaner", "tomatsauce, ost, oksefars, oregano", 53));
@@ -30,8 +32,13 @@ public class Menu {
         this.menu.add(pizza);
     }
 
+    //Finds pizza.
     public Pizza findPizza(int userInput){
+
+        //Loops through the menu.
         for (Pizza pizza : menu) {
+
+            //If the user writes a pizza number that matches with a pizza number from the menu, the pizza is returned.
             if(userInput == pizza.getNumber()){
                 return pizza;
             }
@@ -39,10 +46,12 @@ public class Menu {
         return null;
     }
 
+    //TODO: delete if not used
     public ArrayList<Pizza> getMenu() {
         return menu;
     }
 
+    //Returns the size of the menu.
     public int menuSize(){
         return menu.size();
     }
