@@ -15,7 +15,7 @@ public class UserInterface {
     }
 
 
-    public void userOptions() throws IOException {
+    public void userOptions() {
 
         boolean running = true;
         while (running) {
