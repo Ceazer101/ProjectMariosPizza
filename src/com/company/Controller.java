@@ -50,7 +50,7 @@ public class Controller {
         if (order.numbersOfOrders() > 0) {
             return order.getOrders();
         } else {
-            System.out.println("Der er ikke nogen aktive bestillinger");
+            System.out.println("Der er ikke nogen aktive bestillinger"); //TODO: not good practice!
         }
         return null;
     }
