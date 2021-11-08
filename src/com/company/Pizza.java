@@ -28,4 +28,5 @@ public class Pizza {
     public String toString() {
         return "nr " + number + ". " + name + ", " + ingredients + ": " + price + "kr.";
     }
+
 }

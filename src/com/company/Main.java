@@ -5,10 +5,10 @@ public class Main {
     public static void main(String[] args) {
 
         //Initializing a UserInterface object.
-        UserInterface ui = new UserInterface();
+        Controller cont = new Controller();
 
         //method call.
-        ui.start();
+        cont.start();
 
         //Linebreak for aesthetic.
         System.out.println();

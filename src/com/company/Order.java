@@ -50,47 +50,9 @@ public class Order {
         orders.add(order);
     }
 
-    //Prints the list of active orders.
-    public void showActiveOrders(){
-
-        //Loops through the list of orders and prints the order number.
-        for (Order order: getOrders() ){
-            System.out.println("(" + order.getOrderNumber() + ")");
-
-            //Loops through the list of pizza's and prints the pizza number and pizza name.
-            for (Pizza pizza : order.getPizzas()) {
-                System.out.print(pizza.getNumber() + "  ");
-                System.out.println(pizza.getName());
-            }
-        }
-    }
-
     //Returns how many orders there are.
     public int numbersOfOrders(){
         return orders.size();
     }
 
-    // TODO: ????
-    // Makes a formatted string of pizza.
-    public String makeStringPizzaName(){
-
-        //Initializing a StringBuilder object.
-        StringBuilder stringBuilder = new StringBuilder();
-
-        //Loops through the list of pizza's.
-        for (Pizza pizza : pizzas) {
-
-            //Adds the pizza number.
-            stringBuilder.append(pizza.getNumber()).append(" ");
-
-            //Adds the name of the pizza.
-            stringBuilder.append(pizza.getName()).append(" ");
-        }
-        return stringBuilder.toString();
-    }
-
-    //Clear order(s).
-    public void clearOrders(){
-        orders.clear();
-    }
 }
