@@ -9,14 +9,15 @@ public class Order {
     private ArrayList<Pizza> pizzas = new ArrayList<>();
     private int orderNumber = 1;
 
-    //TODO: delete constructor if not used.
+    /*//TODO: delete constructor if not used.
     public Order(int orderNumber, ArrayList<Pizza> list){
        this.orderNumber = orderNumber;
        this.pizzas = list;
-    }
+    }*/
 
     //Overloading of constructor.
     public Order() {
+
     }
 
     //Adds 1 to orderNumber.
