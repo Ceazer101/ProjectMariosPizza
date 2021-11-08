@@ -14,6 +14,10 @@ public class UserInterface {
         this.controller = new Controller();
     }
 
+    public void start(){
+        System.out.println("Velkommen til PizzaMaster 9000");
+        userOptions();
+    }
 
     public void userOptions() {
 

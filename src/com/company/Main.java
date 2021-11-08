@@ -8,7 +8,7 @@ public class Main {
         UserInterface ui = new UserInterface();
 
         //method call.
-        ui.userOptions();
+        ui.start();
 
         //Linebreak for aesthetic.
         System.out.println();
