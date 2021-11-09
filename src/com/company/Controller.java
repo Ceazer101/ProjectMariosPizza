@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 
 public class Controller {
 
@@ -39,9 +40,6 @@ public class Controller {
                 case "opret", "o":
                     //prints the menu
                     seeMenu();
-
-                    //asks the user for pizza name
-                    userInterface.printMessage("indtast venligst nummer på den pizza der skal tilføjes (Slut bestilling med '0'): ");
 
                     //creates order.
                     createOrder();
@@ -90,6 +88,7 @@ public class Controller {
 
         //Initializing variable
         boolean notDone = true;
+        int userInput = -1;
 
         //Initializing an Order object
         Order newOrder = new Order();
@@ -97,25 +96,30 @@ public class Controller {
         //TODO: make a comment here
         newOrder.setOrderNumber(order.getOrderNumber());
 
-        while(notDone){
+        //asks the user for pizza name
+        userInterface.printMessage("indtast venligst nummer på den pizza der skal tilføjes (Slut bestilling med '0'): ");
 
-            //Saves pizza number in variable.
-            int userInput = userInterface.getPizzaNumber();
 
-            //If the user types 0, the loops ends.
-            //If the user does not enter 0, then you will keep adding to the order.
-            if (userInput == 0){
-                notDone = false;
-            } else {
-                //If the user types a number lower than 0 or greater than the menu size, it prints error message.
-                //If the user enters a valid number, the pizza is added to the order.
-                if (userInput > MENU.menuSize() || userInput < 0) {
-                    userInterface.printMessage("Der findes ikke en pizza med det nummer, prøv  igen.");
-                } else {
-                    newOrder.addPizza(findPizza(userInput));
-                }
+            while(notDone){
+
+                    //Saves pizza number in variable.
+                    userInput = userInterface.validateInput();
+
+                    //If the user types 0, the loops ends.
+                    //If the user does not enter 0, then you will keep adding to the order.
+                    if (userInput == 0) {
+                        notDone = false;
+                    } else {
+                        //If the user types a number lower than 0 or greater than the menu size, it prints error message.
+                        //If the user enters a valid number, the pizza is added to the order.
+                        if (userInput > MENU.menuSize() || userInput < 0) {
+                            userInterface.printMessage("Der findes ikke en pizza med det nummer, prøv  igen.");
+                        } else {
+                            newOrder.addPizza(findPizza(userInput));
+                        }
+                    }
             }
-        }
+
         //Counts when an order is finished and adds 1 to the order number.
         order.orderCounter();
         order.addOrder(newOrder);

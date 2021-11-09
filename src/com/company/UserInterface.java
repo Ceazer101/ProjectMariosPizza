@@ -24,5 +24,21 @@ public class UserInterface {
     public int getPizzaNumber(){
         return scanner.nextInt();
     }
+
+    public int validateInput(){ //TODO: add to class diagram.
+       int input = 0;
+        boolean valid = true;
+        while(valid) {
+           if (scanner.hasNextInt()) {
+               input = scanner.nextInt();
+               valid = false;
+           } else {
+               printMessage("Dette er ikke et nummer.");
+               scanner.next();
+           }
+       }
+       return input;
+    }
+
 }
 
