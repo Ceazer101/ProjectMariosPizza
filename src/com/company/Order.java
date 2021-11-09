@@ -56,4 +56,21 @@ public class Order {
         return orders.size();
     }
 
+    public String makeStringPizzaName(){
+
+        //Initializing a StringBuilder object.
+        StringBuilder stringBuilder = new StringBuilder();
+
+        //Loops through the list of pizza's.
+        for (Pizza pizza : getPizzas()) {
+
+            //Adds the pizza number.
+            stringBuilder.append(pizza.getNumber()).append(" ");
+
+            //Adds the name of the pizza.
+            stringBuilder.append(pizza.getName()).append(" ");
+        }
+        return stringBuilder.toString();
+    }
+
 }

@@ -1,7 +1,0 @@
-1 Vesuvio 2 Amerikaner 3 Cacciatore  
-10 Capricciosa 1 Vesuvio 12 Le blissola  
-1 Vesuvio 2 Amerikaner 3 Cacciatore 4 Carbona 5 Dennis 6 Bertil 1 Vesuvio  
-12 Le blissola 6 Bertil  
-3 Cacciatore 4 Carbona
-1 Vesuvio 2 Amerikaner 3 Cacciatore 4 Carbona
-5 Dennis 6 Bertil 7 Silvia

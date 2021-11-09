@@ -162,7 +162,7 @@ public class Controller {
 
             //Loops through the orders and writes the orders in the file.
             for (Order order : order.getOrders()) {
-                fileWriter.append(makeStringPizzaName() + " ");
+                fileWriter.append(order.makeStringPizzaName() + " ");
                 fileWriter.append("\n");
             }
             //Closes file.
@@ -183,20 +183,4 @@ public class Controller {
 
     }
 
-    public String makeStringPizzaName(){
-
-        //Initializing a StringBuilder object.
-        StringBuilder stringBuilder = new StringBuilder();
-
-        //Loops through the list of pizza's.
-        for (Pizza pizza : order.getPizzas()) {
-
-            //Adds the pizza number.
-            stringBuilder.append(pizza.getNumber()).append(" ");
-
-            //Adds the name of the pizza.
-            stringBuilder.append(pizza.getName()).append(" ");
-        }
-        return stringBuilder.toString();
-    }
 }
