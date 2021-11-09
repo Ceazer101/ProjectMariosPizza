@@ -8,7 +8,7 @@ public class Menu {
     private ArrayList<Pizza> menu = new ArrayList<>();
 
     //Hardcoded pizza's and added them to the arraylist.
-    public Menu(){
+    public Menu() {
         addPizza(new Pizza(1, "Vesuvio", "tomatsauce, ost, skinke, oregano", 57));
         addPizza(new Pizza(2, "Amerikaner", "tomatsauce, ost, oksefars, oregano", 53));
         addPizza(new Pizza(3, "Cacciatore", "tomatsauce, ost, pepperoni, oregano", 57));
@@ -32,13 +32,13 @@ public class Menu {
     }
 
     //Finds pizza.
-    public Pizza findPizza(int userInput){
+    public Pizza findPizza(int userInput) {
 
         //Loops through the menu.
         for (Pizza pizza : menu) {
 
             //If the user writes a pizza number that matches with a pizza number from the menu, the pizza is returned.
-            if(userInput == pizza.getNumber()){
+            if (userInput == pizza.getNumber()) {
                 return pizza;
             }
         }
@@ -51,7 +51,7 @@ public class Menu {
     }
 
     //Returns the size of the menu.
-    public int menuSize(){
+    public int menuSize() {
         return menu.size();
     }
 

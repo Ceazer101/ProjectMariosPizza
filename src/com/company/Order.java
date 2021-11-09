@@ -9,24 +9,25 @@ public class Order {
     private ArrayList<Pizza> pizzas = new ArrayList<>();
     private int orderNumber = 1;
 
-    //TODO: delete constructor if not used.
+    /*//TODO: delete constructor if not used.
     public Order(int orderNumber, ArrayList<Pizza> list){
        this.orderNumber = orderNumber;
        this.pizzas = list;
-    }
+    }*/
 
     //Overloading of constructor.
     public Order() {
+
     }
 
     //Adds 1 to orderNumber.
-    public void orderCounter(){
+    public void orderCounter() {
         orderNumber++;
     }
 
     //Adds pizza.
-    public void addPizza(Pizza pizza){
-       pizzas.add(pizza);
+    public void addPizza(Pizza pizza) {
+        pizzas.add(pizza);
     }
 
     public int getOrderNumber() {
@@ -46,13 +47,30 @@ public class Order {
     }
 
     //Adds order(s).
-    public void addOrder(Order order){
+    public void addOrder(Order order) {
         orders.add(order);
     }
 
     //Returns how many orders there are.
-    public int numbersOfOrders(){
+    public int numbersOfOrders() {
         return orders.size();
+    }
+
+    public String makeStringPizzaName() {
+
+        //Initializing a StringBuilder object.
+        StringBuilder stringBuilder = new StringBuilder();
+
+        //Loops through the list of pizza's.
+        for (Pizza pizza : getPizzas()) {
+
+            //Adds the pizza number.
+            stringBuilder.append(pizza.getNumber()).append(" ");
+
+            //Adds the name of the pizza.
+            stringBuilder.append(pizza.getName()).append(" ");
+        }
+        return stringBuilder.toString();
     }
 
 }

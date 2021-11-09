@@ -6,7 +6,7 @@ public class UserInterface {
     private Scanner scanner = new Scanner(System.in);
 
 
-    public String readUserInput(){
+    public String readUserInput() {
         //Prints the different commands the user can write.
         System.out.println();
         System.out.println("Du kan taste følgende kommandoer: ");
@@ -17,11 +17,11 @@ public class UserInterface {
         return scanner.next().trim().toLowerCase();
     }
 
-    public void printMessage(String messsage){
+    public void printMessage(String messsage) {
         System.out.println(messsage);
     }
 
-    public int getPizzaNumber(){
+    public int getPizzaNumber() {
         return scanner.nextInt();
     }
 
