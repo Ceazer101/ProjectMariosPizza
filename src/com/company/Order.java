@@ -21,13 +21,13 @@ public class Order {
     }
 
     //Adds 1 to orderNumber.
-    public void orderCounter(){
+    public void orderCounter() {
         orderNumber++;
     }
 
     //Adds pizza.
-    public void addPizza(Pizza pizza){
-       pizzas.add(pizza);
+    public void addPizza(Pizza pizza) {
+        pizzas.add(pizza);
     }
 
     public int getOrderNumber() {
@@ -47,16 +47,16 @@ public class Order {
     }
 
     //Adds order(s).
-    public void addOrder(Order order){
+    public void addOrder(Order order) {
         orders.add(order);
     }
 
     //Returns how many orders there are.
-    public int numbersOfOrders(){
+    public int numbersOfOrders() {
         return orders.size();
     }
 
-    public String makeStringPizzaName(){
+    public String makeStringPizzaName() {
 
         //Initializing a StringBuilder object.
         StringBuilder stringBuilder = new StringBuilder();
